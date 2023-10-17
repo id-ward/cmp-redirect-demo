@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acknowledgement Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Acknowledgement Page</h1>
+    </header>
+    <main>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Do you agree to redirect back?</h2>
+                <button id="agree-btn">Agree</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2021 Acknowledgement Page</p>
+    </footer>
+    <script>
+        var modal = document.getElementById("modal");
+        var agreeBtn = document.getElementById("agree-btn");
+
+        agreeBtn.onclick = function() {
+            modal.style.display = "none";
+            history.back();
+        }
+    </script>
+</body>
+</html>
