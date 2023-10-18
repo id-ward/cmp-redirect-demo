@@ -3,7 +3,24 @@
 
 <head>
     <title>Acknowledgement Page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    <script>
+        setTimeout(function () {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "styles2.css";
+            document.head.appendChild(link);
+        }, 800);
+        setTimeout(function () {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "styles3.css";
+            document.head.appendChild(link);
+        }, 700);
+    </script>
+    
 </head>
 
 <body>
@@ -11,6 +28,7 @@
         <h1>Acknowledgement Page</h1>
     </header>
     <main>
+        <!-- <button id="modal-btn">Open Modal</button> -->
         <div id="modal" class="modal">
             <div class="modal-content">
                 <h2>Do you agree to redirect back?</h2>
@@ -32,6 +50,16 @@
                     ? document.referrer : 'https://kyrylenko.github.io/cmp-redirect-demo'
             }, 800);
         }
+
+        setTimeout(function () {
+            modal.style.display = "flex";
+        }, 2000);
+
+        /* window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } */
     </script>
 </body>
 
