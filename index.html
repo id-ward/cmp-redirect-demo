@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Acknowledgement Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Acknowledgement Page</h1>
@@ -23,12 +25,14 @@
         var modal = document.getElementById("modal");
         var agreeBtn = document.getElementById("agree-btn");
 
-        agreeBtn.onclick = function() {
+        agreeBtn.onclick = function () {
             modal.style.display = "none";
             setTimeout(function () {
-                window.location.href = document.referrer;
+                window.location.href = window.location.hostname === 'localhost'
+                    ? document.referrer : 'https://kyrylenko.github.io/cmp-redirect-demo'
             }, 800);
         }
     </script>
 </body>
+
 </html>
